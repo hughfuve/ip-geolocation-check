@@ -33,23 +33,12 @@ function what_is_client_ip() {
 }
 
 /**
- * A conditional to find if the IP Address is from the US
+ * A convenience function that is a wrapper for is_country with 'US' passed in as the country code.
  */
 function is_us(){
-	if ( ! isset( $_SESSION['country'] ) ) {
-		$ipaddress = what_is_client_ip();
-		$url = 'http://freegeoip.net/json/' . $ipaddress;
-		$response = wp_remote_get( $url );
-		$body = json_decode( $response['body'] );
-		$country = $body->country_code;
-		$_SESSION['country'] = $country;
-	} 
-
-	if ( 'US' !== $_SESSION['country'] ) {
-		return false;
-	} else {
-		return true;
-	}
+	
+	return is_country( 'US' );
+	
 }
 
 /**
