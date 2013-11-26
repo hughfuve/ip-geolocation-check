@@ -13,17 +13,17 @@ Author URI: http://dustyf.com
  */
 function what_is_client_ip() {
     $ipaddress = '';
-    if ( $_SERVER['HTTP_CLIENT_IP'] ) {
+    if ( isset( $_SERVER['HTTP_CLIENT_IP'] ) $_SERVER['HTTP_CLIENT_IP'] ) {
         $ipaddress = $_SERVER['HTTP_CLIENT_IP'];
-    } else if ( $_SERVER['HTTP_X_FORWARDED_FOR'] ) {
+    } else if ( isset( $_SERVER['HTTP_X_FORWARDED_FOR'] ) $_SERVER['HTTP_X_FORWARDED_FOR'] ) {
         $ipaddress = $_SERVER['HTTP_X_FORWARDED_FOR'];
-    } else if ( $_SERVER['HTTP_X_FORWARDED'] ) {
+    } else if ( isset( $_SERVER['HTTP_X_FORWARDED'] ) $_SERVER['HTTP_X_FORWARDED'] ) {
         $ipaddress = $_SERVER['HTTP_X_FORWARDED'];
-    } else if ( $_SERVER['HTTP_FORWARDED_FOR'] ) {
+    } else if ( isset( $_SERVER['HTTP_FORWARDED_FOR'] ) $_SERVER['HTTP_FORWARDED_FOR'] ) {
         $ipaddress = $_SERVER['HTTP_FORWARDED_FOR'];
-    } else if ( $_SERVER['HTTP_FORWARDED'] ) {
+    } else if ( isset( $_SERVER['HTTP_FORWARDED'] ) $_SERVER['HTTP_FORWARDED'] ) {
         $ipaddress = $_SERVER['HTTP_FORWARDED'];
-    } else if ( $_SERVER['REMOTE_ADDR'] ) {
+    } else if ( isset( $_SERVER['REMOTE_ADDR'] ) $_SERVER['REMOTE_ADDR'] ) {
         $ipaddress = $_SERVER['REMOTE_ADDR'];
     } else {
         $ipaddress = 'UNKNOWN';
@@ -33,23 +33,12 @@ function what_is_client_ip() {
 }
 
 /**
- * A conditional to find if the IP Address is from the US
+ * A convenience function that is a wrapper for is_country with 'US' passed in as the country code.
  */
 function is_us(){
-	if ( ! isset( $_SESSION['country'] ) ) {
-		$ipaddress = what_is_client_ip();
-		$url = 'http://freegeoip.net/json/' . $ipaddress;
-		$response = wp_remote_get( $url );
-		$body = json_decode( $response['body'] );
-		$country = $body->country_code;
-		$_SESSION['country'] = $country;
-	} 
-
-	if ( 'US' !== $_SESSION['country'] ) {
-		return false;
-	} else {
-		return true;
-	}
+	
+	return is_country( 'US' );
+	
 }
 
 /**
