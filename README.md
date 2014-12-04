@@ -1,7 +1,7 @@
 IP GeoLocation Check for PHP
 ====================
 
-General Class that checks the geolocation of the visitor's IP by default, and can be used to collect geo IP data for any IP address.
+General Class that checks the geolocation of the visitor's IP by default, and can be used to collect geo IP data for any IP address using freegeoip.net API
 
 ## Instructions
 
