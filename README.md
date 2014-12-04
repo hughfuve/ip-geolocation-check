@@ -17,15 +17,8 @@ Licence: My works are MIT licence
     REF https://github.com/Faison/ip-geolocation-check/blob/master/trico-geolocate-ip.php
 ## USAGE:
     $geoObj = new geo($ip (optional)); if $ip='' then collect for client IP;
-  
-## METHODS:
-    whatIsClientIP()         ;returns your client IP
-    isUS()                   ;returns true/false for US
-    isCountry($countryCode)  ;returns true/false for country code
-    getRemoteData($url)      ;makes a curl call to freegeoip.net/JSON and returns the json data struct
-    getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
- 
- ## FILLS geoData WITH:
+
+## EXAMPLE:
     this->geoData= stdClass Object
         [ip] => 50.53.xx.xxx
         [country_code]  => US
@@ -38,12 +31,19 @@ Licence: My works are MIT licence
         [latitude]      => 45.446
         [longitude]     => -122.882
         [metro_code]    => 820
-    
- 
+
+## METHODS:
+    whatIsClientIP()         ;returns your client IP
+    isUS()                   ;returns true/false for US
+    isCountry($countryCode)  ;returns true/false for country code
+    getRemoteData($url)      ;makes a curl call to freegeoip.net/JSON and returns the json data struct
+    getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
+
 ## DERIVED FROM:  
-Plugin Name: IP Geolocation Check
-Plugin URI: http://dustyf.com
-Description: Finds the user's IP address and checks the geolocation of it.
-Author: Dustin Filippini
-Version: 0.1
-Author URI: http://dustyf.com
+    Plugin Name: IP Geolocation Check ;
+    Plugin URI: http://dustyf.com;
+    Description: Finds the user's IP address and checks the geolocation of it;
+    Author: Dustin Filippini;
+    Version: 0.1;
+    Author URI: http://dustyf.com;
+    
