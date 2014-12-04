@@ -19,7 +19,7 @@ Licence: My works are MIT licence
     $geoObj = new geo($ip (optional)); if $ip='' then collect for client IP;
 
 ## RETURNS:
-    this->geoData= stdClass Object
+    $geoObj->geoData= stdClass Object
         [ip] => 50.53.xx.xxx
         [country_code]  => US
         [country_name]  => United States
