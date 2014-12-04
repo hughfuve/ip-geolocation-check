@@ -40,10 +40,10 @@ Licence: My works are MIT licence
     getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
 
 ## DERIVED FROM:  
-    Plugin Name: IP Geolocation Check ;
-    Plugin URI: http://dustyf.com;
-    Description: Finds the user's IP address and checks the geolocation of it;
-    Author: Dustin Filippini;
-    Version: 0.1;
-    Author URI: http://dustyf.com;
+    Plugin Name:            IP Geolocation Check ;
+    Plugin URI:             http://dustyf.com;
+    Description:            Finds the user's IP address and checks the geolocation of it;
+    Author:                 Dustin Filippini;
+    Version:                0.1;
+    Author URI:             http://dustyf.com;
     
