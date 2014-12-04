@@ -26,8 +26,8 @@ Licence: My works are MIT licence
     getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
  
  ## RETURNS:
- $this->geoData=[stdClass Object
-(
+    $this->geoData= stdClass Object
+    (
     [ip] => 50.53.xx.xxx
     [country_code]  => US
     [country_name]  => United States
@@ -39,7 +39,7 @@ Licence: My works are MIT licence
     [latitude]      => 45.446
     [longitude]     => -122.882
     [metro_code]    => 820
-)
+    )
  
 ## DERIVED FROM:  
 Plugin Name: IP Geolocation Check
