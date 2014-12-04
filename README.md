@@ -25,7 +25,7 @@ Licence: My works are MIT licence
     getRemoteData($url)      ;makes a curl call to freegeoip.net/JSON and returns the json data struct
     getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
  
- ## RETURN EXAMPLE:
+ ## FILLS geoData WITH:
     this->geoData= stdClass Object
         [ip] => 50.53.xx.xxx
         [country_code]  => US
