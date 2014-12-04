@@ -20,7 +20,7 @@ Licence: My works are MIT licence
 
 ## RETURNS:
     $geoObj->geoData= stdClass Object
-        [ip] => 50.53.xx.xxx
+        [ip]            => 50.53.xx.xxx
         [country_code]  => US
         [country_name]  => United States
         [region_code]   => OR
