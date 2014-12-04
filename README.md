@@ -25,21 +25,20 @@ Licence: My works are MIT licence
     getRemoteData($url)      ;makes a curl call to freegeoip.net/JSON and returns the json data struct
     getGeoData($ip='')       ;decodes JSON fills $geoData with geo data for IP
  
- ## RETURNS:
-    $this->geoData= stdClass Object
-    (
-    [ip] => 50.53.xx.xxx
-    [country_code]  => US
-    [country_name]  => United States
-    [region_code]   => OR
-    [region_name]   => Oregon
-    [city]          => Beaverton
-    [zip_code]      => 97007
-    [time_zone]     => America/Los_Angeles
-    [latitude]      => 45.446
-    [longitude]     => -122.882
-    [metro_code]    => 820
-    )
+ ## RETURN EXAMPLE:
+    this->geoData= stdClass Object
+        [ip] => 50.53.xx.xxx
+        [country_code]  => US
+        [country_name]  => United States
+        [region_code]   => OR
+        [region_name]   => Oregon
+        [city]          => Beaverton
+        [zip_code]      => 97007
+        [time_zone]     => America/Los_Angeles
+        [latitude]      => 45.446
+        [longitude]     => -122.882
+        [metro_code]    => 820
+    
  
 ## DERIVED FROM:  
 Plugin Name: IP Geolocation Check
