@@ -95,8 +95,8 @@ class geo
 
     function getGeoData($ip='')    {
         if($ip==''){
-            if (!isset($_SESSION['geoData'])) {          //trying to cache the data and save calls to freegeoip because we only get 10k calls per hour.
-                                                         // but using session space to hold your data is looking for trouble with resource overload            
+            if (!isset($_SESSION['geoData'])) {           //trying to cache the data and save calls to freegeoip because we only get 10k calls per hour.
+                                                          // but using session space to hold your data is looking for trouble with resource overload
                 $this->ipaddress = $this->whatIsClientIP();
                 $response   = $this->getRemoteData("http://freegeoip.net/json/" . $this->ipaddress);
 
